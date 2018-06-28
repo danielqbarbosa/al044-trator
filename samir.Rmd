@@ -1,0 +1,153 @@
+--- 
+title: "Projeto Trator"
+author:
+  affiliation: UFPR
+  name: Daniel de Queiroz Barbosa
+fontsize: 12pt
+output:
+  html_document: default
+  pdf_document:
+    fig_caption: yes
+    keep_tex: yes
+  word_document: default
+keywords: pandoc, r markdown, knitr
+link-citations: yes
+geometry: margin=1in
+spacing: double
+thanks: Valeu valeu obrigado obrigado obrigado ........
+bibliography: tractor.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Projeto Trator  
+
+**Sistema de Analise de Maquinas e Implementos Rurais**
+
+**Planejamento e Analise operacional**
+
+# Ambiente computacional
+
+Procedimento aplicado em ambiente Windows.
+
+## Algoritmos genéticos
+
+Os Algoritmos genéticos são úteis para situações nas quais milhares de soluções são possíveis e precisam ser avaliadas para a escolha de uma solução ótima. São utilizados em processos de resolução de problemas de otimização de difícil resolução por técnicas tradicionais (maximização). 
+
+Ele utiliza um conjunto de regras de processo matemático que especificam como a combinação de componentes deve ser feita. 
+
+Podemos citar como exemplo de aplicações a trajetória de um braço robô, Processo de fluxo de fábrica em máquinas sequenciais (cada máquina se ocupa com uma tarefa), Jogos, como o xadrez, Soluções para Minimizar o custo de um produto ou Maximizar as vendas. 
+
+Diversos problemas empresariais requerem otimização como a minimização de custos e maximização de lucros. Os AGs podem acelerar a busca na resolução destes problemas, uma vez que tenham um espaço de busca muito grande.
+
+## Linguagem selecionada
+- Python 3.6 64bit.[^1]
+- Biblioteca Kivy 1.10.1.dev0.[^fn1]
+- RStudio.
+
+[^1]: Teste de nota de rodapé
+[^fn1]: @kivy2
+
+## Justificativa:
+- Linguagem Multiplataforma (cross-plataform), podendo ser desenvolvido para aplicações desktop e mobile;
+- Open Source;
+- Possui vários pacotes de ferramentas científicas.
+
+## Requisitos:
+- Instalação do Python 3.6;[^fn3] 
+- Instalação do Kivy 1.10.1.
+- Ferramenta IDE PyCharm.
+
+[^fn3]: [@python362].
+
+## Procedimento de instalação
+
+### 1- Python versão 3.6.
+- Download a partir de <https://www.python.org/downloads/release/python-362/>.
+
+Diretório de instalação c:/Opt/Python.
+
+### 2- PyCharm! IDE para Python e Django.
+
+Download a partir de <https://www.jetbrains.com/pycharm/download/>
+
+### 3 Kivy
+
+A biblioteca Kivy é um framework para desenvolvimento multiplataforma, escrito majoritariamente com a linguagem Python/Cython, permite o desenvolvimento de aplicações para diversos sistemas operacionais, tais com, Microsoft Windows, Linux, Mac, Android, iOS, Raspberry utilizando um mesmo código.
+
+O projeto é composto por vários sub-projetos, cada um especializado numa determinada tarefa, como por exemplo, a geração de executáveis para determinada plataforma ou então, uma API genérica para facilmente acessarmos o hardware em qualquer dispositivos e em diferentes plataformas sem a necessidade de escrevermos uma única linha de código a mais.
+
+É importante não confundir o projeto Kivy com a biblioteca Kivy. O projeto Kivy, cujo site é <http://kivy.org> é composto por vários sub-projetos, dentre estes, a biblioteca Kivy.
+
+
+**Dependências do Kivy:** 
+
+- gstreamer for audio and video- <https://gstreamer.freedesktop.org/download/>;
+- glew and/or angle (3.5 only) for OpenGL- <http://glew.sourceforge.net/>;
+- sdl2 for control and/or OpenGL.
+
+**Instalação via 'pip' no prompt do DOS:**
+
+Para window versão 32bit: 
+
+- python -m pip install kivy;
+
+Para windows versão 64bit AMD: 
+
+- python -m pip install C:/Downloads/Python/Kivy-1.10.1.dev0-cp36-cp36m-win_amd64.whl;
+
+Kivy exemplos (https://kivy.org/downloads/appveyor/kivy/): 
+
+- python -m pip install C:/Downloads/Python/Kivy_examples-1.10.1.dev0.20170930.5f6501fa-py2.py3-none-any.whl
+
+- python -m pip install docutils pygments pypiwin32 kivy.deps.sdl2 kivy.deps.glew;
+- python -m pip install kivy.deps.gstreamer;
+- python -m pip install kivy.deps.angle ;
+
+**OpenGL 2.0**
+
+OpenGL é uma API de desenvolvimento de aplicações gráficas e, ao mesmo tempo, o nome de uma linguagem de programação semelhante ao C++. A palavra OpenGL é um acrônimo de Open Graphics Library`, que, numa tradução livre teríamos Biblioteca Gráfica Aberta. O seu uso permite o fácil desenvolvimento de aplicações gráficas, inclusive com ambientes 3D que podem ser executado em praticamente todos sistemas operacionais e nos principais dispositivos. A biblioteca é amplamente utilizada na construção de jogos, ferramentas 3D ou qualquer aplicação que faça uso intensivo do hardware gráfico.
+
+**Bug do OpenGL:**
+
+The problem is that all Windows versions come with OpenGL 1.1 by default, and the Kivy Framework that runs the Buffered VPN application needs OpenGL 2.0 support.
+
+Definir uma variável de ambiente no Windows para resolver o bug do Open GL=versão 1.1:
+
+Solução para o Python 3.6 e windows 8.1. Resolve o problema na maioria dos casos:
+
+1. right click on This PC then open Properties .
+2. go to Advanced system settings .
+3. click on Environment Variables .
+4. click on New in User variables for --- .
+5. put KIVY_GL_BACKEND in Variable name .
+6. put angle_sdl2 in Variable value 
+
+Outra solução. Se a solução anterior não funcionar, então se deve proceder ao upgrade your graphics drivers. For that, you’ll need to know what type of graphics card you have in your system.
+
+
+### 99. Preparação e edição deste documento
+Documento criado na ferramenta RStudio [^rstudio], usando o formato Markdown [^markdown] e tipo de documento "rticles".
+
+>install.packages("rticles", type = "source")
+
+[^markdown]: @R-bookdown\cite{R-bookdown}
+[^rstudio]: @rstudio 
+
+`r '## Referências: {-}' `
+
+ACM. Association for Computing Machiney. Advancing Computing as a Science and Profession. <http://www.acm.org/publications/authors/submissions>.
+
+ACM. Orientaçãoes para Autores sobre o uso adequado. <http://www.acm.org/publications/authors/guidance-for-authors-on-fair-use>
+
+Kivy. Repositório de modelos. Sitio <https://kivy.org/downloads/appveyor/kivy/>;
+
+PyCharm! IDE para Python e Django- <https://www.jetbrains.com/pycharm/download/>. 
+
+RStudio rticles. <https://github.com/rstudio/rticles>.
+
+Formato de citações de publicações usando BibTex. <http://www.acm.org/publications/authors/bibtex-formatting> ;
+
+Markdown. bookdown. <https://bookdown.org/yihui/bookdown/citations.html>
