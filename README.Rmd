@@ -1,38 +1,14 @@
---- 
-title: "Projeto Trator"
-author:
-  affiliation: UFPR
-  name: Daniel de Queiroz Barbosa
-fontsize: 12pt
-output:
-  html_document: default
-  pdf_document:
-    fig_caption: yes
-    keep_tex: yes
-  word_document: default
-keywords: pandoc, r markdown, knitr
-link-citations: yes
-geometry: margin=1in
-spacing: double
-thanks: Valeu valeu obrigado obrigado obrigado ........
-bibliography: tractor.bib
----
+# Projeto Trator  ou Projeto SAMIR  
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+## Sistema de Analise de Maquinas e Implementos Rurais  
 
-# Projeto Trator  
-
-**Sistema de Analise de Maquinas e Implementos Rurais**
-
-**Planejamento e Analise operacional**
+###Planejamento e Analise operacional   
 
 # Ambiente computacional
 
 Procedimento aplicado em ambiente Windows.
 
-## Algoritmos genéticos
+## Algoritmos genéticos  
 
 Os Algoritmos genéticos são úteis para situações nas quais milhares de soluções são possíveis e precisam ser avaliadas para a escolha de uma solução ótima. São utilizados em processos de resolução de problemas de otimização de difícil resolução por técnicas tradicionais (maximização). 
 
@@ -42,7 +18,7 @@ Podemos citar como exemplo de aplicações a trajetória de um braço robô, Pro
 
 Diversos problemas empresariais requerem otimização como a minimização de custos e maximização de lucros. Os AGs podem acelerar a busca na resolução destes problemas, uma vez que tenham um espaço de busca muito grande.
 
-## Linguagem selecionada
+## Linguagem selecionada  
 - Python 3.6 64bit.[^1]
 - Biblioteca Kivy 1.10.1.dev0.[^fn1]
 - RStudio.
@@ -50,12 +26,12 @@ Diversos problemas empresariais requerem otimização como a minimização de cu
 [^1]: Teste de nota de rodapé
 [^fn1]: @kivy2
 
-## Justificativa:
+## Justificativa:  
 - Linguagem Multiplataforma (cross-plataform), podendo ser desenvolvido para aplicações desktop e mobile;
 - Open Source;
 - Possui vários pacotes de ferramentas científicas.
 
-## Requisitos:
+## Requisitos:  
 - Instalação do Python 3.6;[^fn3] 
 - Instalação do Kivy 1.10.1.
 - Ferramenta IDE PyCharm.
@@ -64,16 +40,16 @@ Diversos problemas empresariais requerem otimização como a minimização de cu
 
 ## Procedimento de instalação
 
-### 1- Python versão 3.6.
+### 1- Python versão 3.6.  
 - Download a partir de <https://www.python.org/downloads/release/python-362/>.
 
 Diretório de instalação c:/Opt/Python.
 
-### 2- PyCharm! IDE para Python e Django.
+### 2- PyCharm! IDE para Python e Django.  
 
 Download a partir de <https://www.jetbrains.com/pycharm/download/>
 
-### 3 Kivy
+### 3 Kivy  
 
 A biblioteca Kivy é um framework para desenvolvimento multiplataforma, escrito majoritariamente com a linguagem Python/Cython, permite o desenvolvimento de aplicações para diversos sistemas operacionais, tais com, Microsoft Windows, Linux, Mac, Android, iOS, Raspberry utilizando um mesmo código.
 
