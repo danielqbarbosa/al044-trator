@@ -1,0 +1,7 @@
+--===
+Referências:
+. modulos Kivy. Sitio <https://kivy.org/downloads/appveyor/kivy/>
+
+. PyCharm! IDE para Python e Django. <https://www.jetbrains.com/pycharm/download/>
+
+. Kivy Tutorial. <https://www.youtube.com/watch?v=j9PqNe3J_Cc>

@@ -1,0 +1,29 @@
+<FloatLayout@Button>:
+  font_size: 32
+  color: 0, 0, 0, 1
+  size: 10, 50
+  background_normal: ''
+  background_down: ''
+  background_color: .88, .88, .88, 1
+  size_hint: .4, .3
+
+  <FloatLayout>:
+    CustButton:
+      text: "Top left"
+      pos_hint: {"x": 0, "top": 1 }
+
+    CustButton:
+      text: "Bottom left"
+      pos_hint: {"left": 0, "top": 0 }
+
+    CustButton:
+      text: "Top right"
+      pos_hint: {"right": 1, "top": 1 }
+
+    CustButton:
+      text: "Bottom right"
+      pos_hint: {"left": 0, "bottom": 0 }
+
+    CustButton:
+      text: "Center of screen"
+      pos_hint: {"center_x": .5, "center_y": .5 }

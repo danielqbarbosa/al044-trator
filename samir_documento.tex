@@ -1,0 +1,327 @@
+\documentclass[12pt,]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\hypersetup{unicode=true,
+            pdftitle={Projeto Trator},
+            pdfkeywords={pandoc, r markdown, knitr},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\newcommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+  \title{Projeto Trator}
+  \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+  \author{true}
+  \preauthor{\centering\large\emph}
+  \postauthor{\par}
+  \date{}
+  \predate{}\postdate{}
+
+
+\begin{document}
+\maketitle
+
+\section{Projeto Trator}\label{projeto-trator}
+
+\textbf{Sistema de Analise de Maquinas e Implementos Rurais}
+
+\textbf{Planejamento e Analise operacional}
+
+\section{Configuração do ambiente
+computacional}\label{configuracao-do-ambiente-computacional}
+
+Procedimento aplicado em ambiente Windows.
+
+\subsection{Linguagem selecionada}\label{linguagem-selecionada}
+
+\begin{itemize}
+\tightlist
+\item
+  Python 3.6 64bit.\footnote{Teste de nota de rodapé}
+\item
+  Biblioteca Kivy 1.10.1.dev0.\footnote{Kivy
+    (\protect\hyperlink{ref-kivy2}{2017})}
+\item
+  RStudio.
+\end{itemize}
+
+\subsection{Justificativa:}\label{justificativa}
+
+\begin{itemize}
+\tightlist
+\item
+  Linguagem Multiplataforma (cross-plataform), podendo ser desenvolvido
+  para aplicações desktop e mobile;
+\item
+  Open Source;
+\item
+  Possui vários pacotes de ferramentas científicas.
+\end{itemize}
+
+\subsection{Requisitos:}\label{requisitos}
+
+\begin{itemize}
+\tightlist
+\item
+  Instalação do Python 3.6;\footnote{(Python
+    \protect\hyperlink{ref-python362}{2017}).}
+\item
+  Instalação do Kivy 1.10.1.
+\item
+  Ferramenta IDE PyCharm.
+\end{itemize}
+
+\subsection{Procedimento de
+instalação}\label{procedimento-de-instalacao}
+
+\subsubsection{1- Python versão 3.6.}\label{python-versao-3.6.}
+
+\begin{itemize}
+\tightlist
+\item
+  Download a partir de
+  \url{https://www.python.org/downloads/release/python-362/}.
+\end{itemize}
+
+Diretório de instalação c:/Opt/Python.
+
+\subsubsection{2- PyCharm! IDE para Python e
+Django.}\label{pycharm-ide-para-python-e-django.}
+
+Download a partir de \url{https://www.jetbrains.com/pycharm/download/}
+
+\subsubsection{3 Kivy}\label{kivy}
+
+A biblioteca Kivy é um framework para desenvolvimento multiplataforma,
+escrito majoritariamente com a linguagem Python/Cython, permite o
+desenvolvimento de aplicações para diversos sistemas operacionais, tais
+com, Microsoft Windows, Linux, Mac, Android, iOS, Raspberry utilizando
+um mesmo código.
+
+O projeto é composto por vários sub-projetos, cada um especializado numa
+determinada tarefa, como por exemplo, a geração de executáveis para
+determinada plataforma ou então, uma API genérica para facilmente
+acessarmos o hardware em qualquer dispositivos e em diferentes
+plataformas sem a necessidade de escrevermos uma única linha de código a
+mais.
+
+É importante não confundir o projeto Kivy com a biblioteca Kivy. O
+projeto Kivy, cujo site é \url{http://kivy.org} é composto por vários
+sub-projetos, dentre estes, a biblioteca Kivy.
+
+\textbf{Dependências do Kivy:}
+
+\begin{itemize}
+\tightlist
+\item
+  gstreamer for audio and video-
+  \url{https://gstreamer.freedesktop.org/download/};
+\item
+  glew and/or angle (3.5 only) for OpenGL-
+  \url{http://glew.sourceforge.net/};
+\item
+  sdl2 for control and/or OpenGL.
+\end{itemize}
+
+\textbf{Instalação via `pip' no prompt do DOS:}
+
+Para window versão 32bit:
+
+\begin{itemize}
+\tightlist
+\item
+  python -m pip install kivy;
+\end{itemize}
+
+Para windows versão 64bit AMD:
+
+\begin{itemize}
+\tightlist
+\item
+  python -m pip install
+  C:/Downloads/Python/Kivy-1.10.1.dev0-cp36-cp36m-win\_amd64.whl;
+\end{itemize}
+
+Kivy exemplos (\url{https://kivy.org/downloads/appveyor/kivy/}):
+
+\begin{itemize}
+\item
+  python -m pip install
+  C:/Downloads/Python/Kivy\_examples-1.10.1.dev0.20170930.5f6501fa-py2.py3-none-any.whl
+\item
+  python -m pip install docutils pygments pypiwin32 kivy.deps.sdl2
+  kivy.deps.glew;
+\item
+  python -m pip install kivy.deps.gstreamer;
+\item
+  python -m pip install kivy.deps.angle ;
+\end{itemize}
+
+\textbf{OpenGL 2.0}
+
+OpenGL é uma API de desenvolvimento de aplicações gráficas e, ao mesmo
+tempo, o nome de uma linguagem de programação semelhante ao C++. A
+palavra OpenGL é um acrônimo de Open Graphics Library`, que, numa
+tradução livre teríamos Biblioteca Gráfica Aberta. O seu uso permite o
+fácil desenvolvimento de aplicações gráficas, inclusive com ambientes 3D
+que podem ser executado em praticamente todos sistemas operacionais e
+nos principais dispositivos. A biblioteca é amplamente utilizada na
+construção de jogos, ferramentas 3D ou qualquer aplicação que faça uso
+intensivo do hardware gráfico.
+
+\textbf{Bug do OpenGL:}
+
+The problem is that all Windows versions come with OpenGL 1.1 by
+default, and the Kivy Framework that runs the Buffered VPN application
+needs OpenGL 2.0 support.
+
+Definir uma variável de ambiente no Windows para resolver o bug do Open
+GL=versão 1.1:
+
+Solução para o Python 3.6 e windows 8.1. Resolve o problema na maioria
+dos casos:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  right click on This PC then open Properties .
+\item
+  go to Advanced system settings .
+\item
+  click on Environment Variables .
+\item
+  click on New in User variables for --- .
+\item
+  put KIVY\_GL\_BACKEND in Variable name .
+\item
+  put angle\_sdl2 in Variable value
+\end{enumerate}
+
+Outra solução. Se a solução anterior não funcionar, então se deve
+proceder ao upgrade your graphics drivers. For that, you'll need to know
+what type of graphics card you have in your system.
+
+\subsubsection{99. Preparação e edição deste
+documento}\label{preparacao-e-edicao-deste-documento}
+
+Documento criado na ferramenta RStudio,\footnote{RStudio Team
+  (\protect\hyperlink{ref-rstudio}{2015})} usando o formato
+Markdown\footnote{Xie
+  (\protect\hyperlink{ref-R-bookdown}{2017})\cite{R-bookdown}} e tipo de
+documento ``rticles''.
+
+\begin{quote}
+install.packages(``rticles'', type = ``source'')
+\end{quote}
+
+\subsection*{Referências:}\label{referencias}
+\addcontentsline{toc}{subsection}{Referências:}
+
+ACM. Association for Computing Machiney. Advancing Computing as a
+Science and Profession.
+\url{http://www.acm.org/publications/authors/submissions}.
+
+ACM. Orientaçãoes para Autores sobre o uso adequado.
+\url{http://www.acm.org/publications/authors/guidance-for-authors-on-fair-use}
+
+Kivy. Repositório de modelos. Sitio
+\url{https://kivy.org/downloads/appveyor/kivy/};
+
+PyCharm! IDE para Python e Django-
+\url{https://www.jetbrains.com/pycharm/download/}.
+
+RStudio rticles. \url{https://github.com/rstudio/rticles}.
+
+Formato de citações de publicações usando BibTex.
+\url{http://www.acm.org/publications/authors/bibtex-formatting} ;
+
+Markdown. bookdown.
+\url{https://bookdown.org/yihui/bookdown/citations.html}
+
+\hypertarget{refs}{}
+\hypertarget{ref-kivy2}{}
+Kivy. 2017. ``Repositório de Modelos.'' Accessed October 1.
+\url{https://kivy.org/downloads/appveyor/kivy/}.
+
+\hypertarget{ref-python362}{}
+Python. 2017. ``Python 3.6.2 Is the Second Maintenance Release of Python
+3.6.'' Accessed October 1.
+\url{https://www.python.org/downloads/release/python-362/}.
+
+\hypertarget{ref-rstudio}{}
+RStudio Team. 2015. \emph{RStudio: Integrated Development Environment
+for R}. Boston, MA: RStudio, Inc. \url{http://www.rstudio.com/}.
+
+\hypertarget{ref-R-bookdown}{}
+Xie, Yihui. 2017. ``Bookdown: Authoring Books and Technical Documents
+with R Markdown.'' Accessed October 1.
+\url{https://CRAN.R-project.org/package=bookdown}.
+
+
+\end{document}
