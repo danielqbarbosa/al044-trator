@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<architect-project version="1.0" appversion="1.0.8">
+ <project-name>samir_modelo_dados</project-name>
+ <print-settings numCopies="1" zoom="1.0" pageNumbersPrinted="true" orientation="1" paperWidth="612.0" paperHeight="792.0" leftBorder="50.0" rightBorder="50.0" topBorder="50.0" bottomBorder="50.0" />
+ <project-data-sources>
+  <data-source id="DS0">
+   <property key="Logical" value="postgreSQL" />
+   <property key="Connection Type" value="PostgreSQL" />
+   <property key="JDBC URL" value="jdbc:postgresql://localhost:5432/postgres" />
+   <property key="UID" value="postgres" />
+   <property key="PWD" value="postgres" />
+   <property key="ca.sqlpower.architect.etl.kettle.database" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.port" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.hostname" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.repos.login" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.repos.password" value="" />
+  </data-source>
+ </project-data-sources>
+ <source-databases>
+ </source-databases>
+ <target-database id="ppdb" dbcs-ref="DS0">
+  <table id="TAB1" populated="true" UUID="d870a979-e739-4f5d-9e25-27af3d2d5123" name="maquinas" objectType="TABLE" physicalName="tb_maquinas" >
+   <remarks>Tabela de máquinas</remarks>
+   <folder id="FOLTAB11" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL2" populated="true" UUID="454fe16f-8d4c-4054-8f7b-62c985c98f7b" autoIncrement="true" autoIncrementSequenceName="tb_maquinas_id_trator_seq" defaultValue="" name="id_trator" nullable="0" physicalName="id_trator" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Identificador sequencial</remarks>
+    </column>
+    <column id="COL3" populated="true" UUID="c0d67a78-7081-4c00-89cf-bd4b418e644d" autoIncrement="false" autoIncrementSequenceName="tb_maquinas_id_fabricante_seq" defaultValue="" name="id_fabricante" nullable="0" physicalName="id_fabricante" precision="0" referenceCount="2" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>identificador do fabricante da maquina</remarks>
+    </column>
+    <column id="COL4" populated="true" UUID="e2466ed9-62ae-4936-b4af-c79ca4d80f2f" autoIncrement="false" autoIncrementSequenceName="tb_maquinas_tipos_tp_maquina_seq" defaultValue="" name="tp_maquina" nullable="0" physicalName="tp_maquina" precision="0" referenceCount="2" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL5" populated="true" UUID="d460684b-96e0-47a4-ac08-450e8ee2e6f5" autoIncrement="false" autoIncrementSequenceName="tb_maquinas_txt_nome_seq" defaultValue="" name="txt_nome" nullable="0" physicalName="txt_nome" precision="20" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Nome ou sigla do trator</remarks>
+    </column>
+    <column id="COL6" populated="true" UUID="b3f84b06-3aaf-4975-a838-982421de7d3b" autoIncrement="false" autoIncrementSequenceName="tb_maquinas_pot_motor_seq" defaultValue="" name="pot_motor" nullable="0" physicalName="pot_motor" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="6" userDefinedTypeUUID="7e55bcd0-7606-4153-b749-9c397f12c4d8" >
+     <remarks>Potencia do motor (CV)</remarks>
+    </column>
+    <column id="COL7" populated="true" UUID="628d1bce-7da7-41cc-9b93-57876059c8cc" autoIncrement="false" autoIncrementSequenceName="tb_maquinas_pot_TDP_seq" defaultValue="" name="pot_TDP" nullable="0" physicalName="pot_TDP" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="6" userDefinedTypeUUID="7e55bcd0-7606-4153-b749-9c397f12c4d8" >
+     <remarks>Potencia na tomada de força ou TDP (CV)</remarks>
+    </column>
+    <column id="COL8" populated="true" UUID="e867e931-f811-40a0-ace7-895895275d7c" autoIncrement="false" autoIncrementSequenceName="tb_maquinas_pot_BT_seq" defaultValue="" name="pot_BT" nullable="0" physicalName="pot_BT" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="6" userDefinedTypeUUID="7e55bcd0-7606-4153-b749-9c397f12c4d8" >
+     <remarks>Potencia na barra de tração - BT (CV)</remarks>
+    </column>
+    <column id="COL9" populated="true" UUID="4ed14856-16fd-4435-a68c-ca9e68c21eb4" autoIncrement="false" autoIncrementSequenceName="tb_maquinas_num_vida_anos_seq" defaultValue="" name="num_vida_anos" nullable="0" physicalName="num_vida_anos" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Vida útil em anos</remarks>
+    </column>
+    <column id="COL10" populated="true" UUID="31121a14-eda6-458a-8bd0-8e56b06c2d92" autoIncrement="false" autoIncrementSequenceName="tb_maquinas_num_vida_horas_seq" defaultValue="" name="num_vida_horas" nullable="0" physicalName="num_vida_horas" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Vida útil em horas</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB13" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB12" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB14" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX11" populated="true" UUID="c46ce878-3d80-4294-bc5b-cafc0fcdf756" clustered="false" name="tb_maquinas_pk" physicalName="tb_maquinas_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC12" populated="true" UUID="330f9d3e-bf01-4f9d-a6bf-054ed9b34e0a" ascendingOrDescending="UNSPECIFIED" column-ref="COL2" name="id_trator" physicalName="id_trator" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB13" populated="true" UUID="bca5050f-e646-4bf2-b9fb-ed774001d66d" name="implementos" objectType="TABLE" physicalName="tb_implementos" >
+   <remarks>Implementos e acessórios tracionados</remarks>
+   <folder id="FOLTAB131" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL14" populated="true" UUID="cb33c418-475e-4dcb-b418-4c6eca798b14" autoIncrement="true" autoIncrementSequenceName="tb_implementos_id_implemento_seq" defaultValue="" name="id_implemento" nullable="0" physicalName="id_implemento" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Identificador sequencial</remarks>
+    </column>
+    <column id="COL15" populated="true" UUID="8c87d609-c270-4be4-90f4-14769b7fbef5" autoIncrement="false" autoIncrementSequenceName="tb_fabricantes_id_fabricante_seq" defaultValue="" name="id_fabricante" nullable="0" physicalName="id_fabricante" precision="0" primaryKeySeq="1" referenceCount="2" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>chave primaria da tabela</remarks>
+    </column>
+    <column id="COL16" populated="true" UUID="f271c059-0e7a-479a-8170-11d2a2537d0a" autoIncrement="false" autoIncrementSequenceName="tb_implementos_txt_sigla_seq" defaultValue="" name="txt_sigla" nullable="0" physicalName="txt_sigla" precision="20" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Sigla ou nome resumido</remarks>
+    </column>
+    <column id="COL17" populated="true" UUID="a4e7d7aa-081a-4ba4-8527-176731122df7" autoIncrement="false" autoIncrementSequenceName="tb_implementos_txt_descricao_seq" defaultValue="" name="txt_descricao" nullable="0" physicalName="txt_descricao" precision="100" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL18" populated="true" UUID="82f28c51-2d2a-4bf0-acea-b3d9871f2c89" autoIncrement="false" autoIncrementSequenceName="tb_implementos_num_linhas_seq" defaultValue="" name="num_linhas" nullable="0" physicalName="num_linhas" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Semeadora: numero de linhas; Arado: numero de discos</remarks>
+    </column>
+    <column id="COL19" populated="true" UUID="723f9c05-301a-4c91-b362-42dde31026bb" autoIncrement="false" autoIncrementSequenceName="tb_implementos_num_espacamento_seq" defaultValue="" name="num_espacamento" nullable="0" physicalName="num_espacamento" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="6" userDefinedTypeUUID="7e55bcd0-7606-4153-b749-9c397f12c4d8" >
+     <remarks>Espaçamento entre linhas ou discos (m)</remarks>
+    </column>
+    <column id="COL20" populated="true" UUID="7dfdc26e-64bc-47af-a612-220476207411" autoIncrement="false" autoIncrementSequenceName="tb_implementos_num_largura_seq" defaultValue="" name="num_largura" nullable="0" physicalName="num_largura" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="6" userDefinedTypeUUID="7e55bcd0-7606-4153-b749-9c397f12c4d8" >
+     <remarks>Largura do implemento (m)</remarks>
+    </column>
+    <column id="COL21" populated="true" UUID="43e152ad-8a9e-4ce9-b818-4d35d9a399bf" autoIncrement="false" autoIncrementSequenceName="tb_implementos_ef_esforco_seq" defaultValue="" name="ef_esforco" nullable="0" physicalName="ef_esforco" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="6" userDefinedTypeUUID="7e55bcd0-7606-4153-b749-9c397f12c4d8" >
+     <remarks>EF: Esforço de tração (CV)</remarks>
+    </column>
+    <column id="COL22" populated="true" UUID="7d5f788e-e7c8-43f1-ad40-a3411dc97a89" autoIncrement="false" autoIncrementSequenceName="tb_maquinas_num_vida_anos_seq" defaultValue="" name="num_vida_anos" nullable="0" physicalName="num_vida_anos" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Vida útil em anos</remarks>
+    </column>
+    <column id="COL23" populated="true" UUID="39ac0094-7ee6-487d-90fc-f864df2f8f05" autoIncrement="false" autoIncrementSequenceName="tb_maquinas_num_vida_horas_seq" defaultValue="" name="num_vida_horas" nullable="0" physicalName="num_vida_horas" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Vida útil em horas</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB133" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB132" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB134" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX24" populated="true" UUID="df4830a5-61ee-41fd-87ea-35eb3a4bc6d9" clustered="false" name="tb_implementos_pk" physicalName="tb_implementos_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC25" populated="true" UUID="300a7215-b89a-4b1e-b51f-b4ed11261c46" ascendingOrDescending="UNSPECIFIED" column-ref="COL14" name="id_implemento" physicalName="id_implemento" />
+     <index-column id="IDC26" populated="true" UUID="b90bce15-842d-4ffc-adf1-7f8aad35faba" ascendingOrDescending="UNSPECIFIED" column-ref="COL15" name="id_fabricante" physicalName="id_fabricante" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB27" populated="true" UUID="cb57d748-7ce0-4dbd-99e6-d0213aef36aa" name="glossario" objectType="TABLE" physicalName="tb_glossario" >
+   <remarks>Dicionário de dados ou glossário da aplicação</remarks>
+   <folder id="FOLTAB271" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL28" populated="true" UUID="3d5701bd-a9a2-4ccc-b8e3-065f533b6590" autoIncrement="true" autoIncrementSequenceName="tb_glossario_id_glossario_seq" defaultValue="" name="id_glossario" nullable="0" physicalName="id_glossario" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL29" populated="true" UUID="fd0de276-703f-4b2c-94bd-9e58e4ba7b84" autoIncrement="false" autoIncrementSequenceName="tb_glossario_txt_termo_seq" defaultValue="" name="txt_termo" nullable="0" physicalName="txt_termo" precision="50" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Termo, sigla ou expressão</remarks>
+    </column>
+    <column id="COL30" populated="true" UUID="a9bb503f-6529-45e1-bf65-7cfc515c90dc" autoIncrement="false" autoIncrementSequenceName="tb_glossario_txt_descricao_seq" defaultValue="" name="txt_descricao" nullable="0" physicalName="txt_descricao" precision="1000" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Descrição do termo/expressão</remarks>
+    </column>
+    <column id="COL31" populated="true" UUID="603c26e7-7bd4-4d52-b336-0c87788d78c3" autoIncrement="false" autoIncrementSequenceName="tb_glossario_txt_referencia_seq" defaultValue="" name="txt_referencia" nullable="0" physicalName="txt_referencia" precision="1000" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Referencia bibliográfica da definição</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB273" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB272" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB274" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX32" populated="true" UUID="d273a8ff-ab6e-479c-8c6a-226706794056" clustered="false" name="tb_glossario_pk" physicalName="tb_glossario_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC33" populated="true" UUID="844e2d04-5d5d-42e3-8177-9fbfa537e82a" ascendingOrDescending="UNSPECIFIED" column-ref="COL28" name="id_glossario" physicalName="id_glossario" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB34" populated="true" UUID="c3012490-4b49-47af-b0ac-3bc61ae4ecf6" name="fabricantes" objectType="TABLE" physicalName="tb_fabricantes" >
+   <remarks>Fabricantes de máquinas e implementos</remarks>
+   <folder id="FOLTAB341" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL35" populated="true" UUID="9c30aee4-27fb-4abc-8a76-1a3b88db23d8" autoIncrement="false" autoIncrementSequenceName="tb_fabricantes_id_fabricante_seq" defaultValue="" name="id_fabricante" nullable="0" physicalName="id_fabricante" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>chave primaria da tabela</remarks>
+    </column>
+    <column id="COL36" populated="true" UUID="31e998a7-812e-4010-8dd2-e98328a9c90a" autoIncrement="false" autoIncrementSequenceName="tb_fabricantes_txt_nome_seq" defaultValue="" name="txt_nome" nullable="0" physicalName="txt_nome" precision="50" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Nome ou sigla do fabricante</remarks>
+    </column>
+    <column id="COL37" populated="true" UUID="2b0a3763-dc7e-4334-b300-3ca0f4731969" autoIncrement="false" autoIncrementSequenceName="tb_fabricantes_txt_descricao_seq" defaultValue="" name="txt_descricao" nullable="0" physicalName="txt_descricao" precision="1000" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Nome descritivo/extenso do fabricante</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB343" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB342" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB344" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX38" populated="true" UUID="39145240-d277-425e-aa9c-7944435b8982" clustered="false" name="tb_fabricantes_pk" physicalName="tb_fabricantes_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC39" populated="true" UUID="dcdafc5a-cb48-4589-9123-852045457348" ascendingOrDescending="UNSPECIFIED" column-ref="COL35" name="id_fabricante" physicalName="id_fabricante" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB40" populated="true" UUID="e206683d-3f25-481e-86c3-297203152ba6" name="maquinas_tipos" objectType="TABLE" physicalName="tb_maquinas_tipos" >
+   <remarks>Tipos de maquina segundo a operacao: semeadora, adubadora, cultivadora, colhedora</remarks>
+   <folder id="FOLTAB401" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL41" populated="true" UUID="d61e0102-ca75-440a-801a-48d4b3292544" autoIncrement="false" autoIncrementSequenceName="tb_maquinas_tipos_tp_maquina_seq" defaultValue="" name="tp_maquina" nullable="0" physicalName="tp_maquina" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL42" populated="true" UUID="dde60105-180e-4fe0-9ce3-9bb45feb6f3a" autoIncrement="false" autoIncrementSequenceName="tb_maquinas_tipos_tipo_nome_seq" defaultValue="" name="tipo_nome" nullable="0" physicalName="tipo_nome" precision="50" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB403" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB402" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB404" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX43" populated="true" UUID="f5f9023f-b203-40ea-8503-5330bf1db8ec" clustered="false" name="tb_maquinas_tipos_pk" physicalName="tb_maquinas_tipos_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC44" populated="true" UUID="19b14238-346a-46d2-874f-1e68882ad36c" ascendingOrDescending="UNSPECIFIED" column-ref="COL41" name="tp_maquina" physicalName="tp_maquina" />
+    </index>
+   </folder>
+  </table>
+  <relationships>
+   <relationship id="REL45" populated="true" UUID="3a03e3cd-b9b8-41ee-8283-2a7da42e499e" deferrability="7" deleteRule="1" fk-table-ref="TAB13" fkCardinality="7" identifying="true" name="tb_fabricantes_tb_implementos_fk" physicalName="tb_fabricantes_tb_implementos_fk" pk-table-ref="TAB34" pkCardinality="2" updateRule="0" >
+    <column-mapping id="CMP46" populated="true" UUID="0cecd508-3ffc-48ed-847d-c5ce3e9181ea" fk-column-ref="COL15" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL35" />
+   </relationship>
+   <relationship id="REL47" populated="true" UUID="b592d029-d374-4c90-9518-cf2d17e5ac9e" deferrability="7" deleteRule="1" fk-table-ref="TAB1" fkCardinality="7" identifying="false" name="tb_fabricantes_tb_maquinas_fk" physicalName="tb_fabricantes_tb_maquinas_fk" pk-table-ref="TAB34" pkCardinality="2" updateRule="0" >
+    <column-mapping id="CMP48" populated="true" UUID="18cfe16d-a5e3-4530-9ed3-cad460131a4f" fk-column-ref="COL3" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL35" />
+   </relationship>
+   <relationship id="REL49" populated="true" UUID="860d21a3-279b-47ed-b5a2-bbbc63c378ac" deferrability="7" deleteRule="3" fk-table-ref="TAB1" fkCardinality="7" identifying="false" name="tb_maquinas_tipos_tb_maquinas_fk" physicalName="tb_maquinas_tipos_tb_maquinas_fk" pk-table-ref="TAB40" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP50" populated="true" UUID="883d08f7-c139-4a43-bec3-a756f031737a" fk-column-ref="COL4" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL41" />
+   </relationship>
+  </relationships>
+ </target-database>
+ <ddl-generator type="ca.sqlpower.architect.ddl.PostgresDDLGenerator" allow-connection="false" target-schema="samir"> </ddl-generator>
+ <liquibase-settings useSeparateChangeSets="false" generateId="true" idStart="1"/>
+ <compare-dm-settings  ddlGenerator="ca.sqlpower.architect.ddl.PostgresDDLGenerator"  outputFormatAsString="SQL"  saveFlag="true" >
+  <source-stuff   datastoreTypeAsString="PROJECT"   filePath=""  />
+  <target-stuff   datastoreTypeAsString="DATABASE"   connectName="postgreSQL"   filePath=""  />
+  <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
+ </compare-dm-settings>
+ <create-kettle-job-settings filePath="C:\dev\samir\config_publicar" jobName="publicar" schemaName="trator" kettleJoinType="0" savingToFile="true" />
+ <play-pen zoom="1.0" viewportX="0" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
+  <table-pane table-ref="TAB1" x="20" y="367" bgColor="0xeeeeee" fgColor="0x0000cc" rounded="true" dashed="false"/>
+  <table-pane table-ref="TAB13" x="476" y="400" bgColor="0xeeeeee" fgColor="0x000000" rounded="true" dashed="false"/>
+  <table-pane table-ref="TAB27" x="49" y="713" bgColor="0xeeeeee" fgColor="0xec7000" rounded="true" dashed="false"/>
+  <table-pane table-ref="TAB34" x="494" y="36" bgColor="0xeeeeee" fgColor="0x0000cc" rounded="true" dashed="false"/>
+  <table-pane table-ref="TAB40" x="42" y="20" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-link relationship-ref="REL45" pkConnection="0.6807511737089202" fkConnection="0.06132075471698113" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL47" pkConnection="0.431924882629108" fkConnection="0.5436893203883495" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL49" pkConnection="0.17647058823529413" fkConnection="0.17475728155339806" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
+ </play-pen>
+ <critic-manager>
+  <critic-grouping platformType="Generic" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.PrimaryKeyCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.RelationshipMappingTypeCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.EmptyRelationshipCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.AlphaNumericNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.AlphaNumericSequenceNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SetDefaultOnColumnWithNoDefaultCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SetNullOnNonNullableColumnCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.DuplicateNameCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="DB2" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.DB2UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="H2" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.H2UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="HSQLDB" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.HSQLDBUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="MySQL" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLCommentCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLReservedWordsCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="Oracle" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OraclePhysicalNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OracleReservedWordsCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OracleUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="PostgreSQL" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.PostgreSQLReservedWordsCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServerUnsupportedFeaturesCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServerReservedWordsCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server 2000" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServer2000UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server 2005" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServer2005UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+ </critic-manager>
+ <profiles topNCount="10">
+  </profiles>
+  <olap>
+   <olap-session id="0" db-ref="ppdb">
+    <Schema id="1" name="trator"/>
+   </olap-session>
+  </olap>
+  <olap-gui>
+   <olap-edit-session osession-ref="0">
+    <play-pen zoom="1.0" viewportX="0" viewportY="0">
+    </play-pen>
+   </olap-edit-session>
+  </olap-gui>
+</architect-project>
